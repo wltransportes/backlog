@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Pendências</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" href="logo.png">
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+
+<div class="dashboard">
+
+  <div class="topbar">
+
+    <div class="logo-area">
+      <!-- COLOQUE SUA LOGO AQUI -->
+      <img src="logo.png" alt="Logo" class="logo">
+      <h1>PENDÊNCIAS</h1>
+      <span>Performance Logística | Backlog </span>
+        
+    </div>
+
+    <input type="file" id="upload" accept=".xlsx">
+
+  </div>
+
+  <!-- CARDS -->
+  <div class="cards">
+    <div class="card">
+      <h3>Total Pendências</h3>
+      <p id="totalPendencias">0</p>
+    </div>
+
+    <div class="card">
+      <h3>Stations</h3>
+      <p id="totalStations">0</p>
+    </div>
+
+    <div class="card">
+      <h3>Status Diferentes</h3>
+      <p id="totalStatus">0</p>
+    </div>
+
+    <div class="card">
+      <h3>Entregadores</h3>
+      <p id="totalDrivers">0</p>
+    </div>
+  </div>
+
+  <!-- FILTROS -->
+  <div class="filters">
+
+    <select id="filterStation">
+      <option value="">Filtrar por Station</option>
+    </select>
+
+    <select id="filterStatus">
+      <option value="">Filtrar por Status</option>
+    </select>
+
+    <select id="filterDriver">
+      <option value="">Filtrar por Entregador</option>
+    </select>
+
+  </div>
+
+  <!-- GRÁFICOS -->
+  <div class="charts">
+    <canvas id="statusChart"></canvas>
+    <canvas id="stationChart"></canvas>
+  </div>
+
+  <!-- TABELA -->
+  <div class="table-container">
+    <input type="text" id="searchInput" placeholder="Buscar Shipment ID...">
+    <table>
+      <thead>
+        <tr>
+          <th>Shipment ID</th>
+          <th>Station</th>
+          <th>Status</th>
+          <th>Entregador</th>
+          <th>LM Hub Aging</th>
+          <th>Delivery Attempts</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

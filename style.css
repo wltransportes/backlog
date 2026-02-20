@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #0c0c0c;
+  color: #fff;
+}
+
+.dashboard {
+  padding: 30px 40px;
+   height:100vh;
+  display:flex;
+  flex-direction:column;
+  padding:20px 40px;
+}
+
+/* TOPBAR */
+
+.topbar {
+  height:100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  height: 100px;
+}
+
+.topbar h1 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+input[type="file"] {
+  background: #1c1c1c;
+  color: #fff;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ff2e2e;
+}
+
+/* CARDS */
+
+.cards {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.card {
+  flex: 1;
+  background: #151515;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #ff2e2e;
+  transition: 0.3s;
+}
+
+.card:hover {
+  background: #1f1f1f;
+}
+
+.card h3 {
+  font-size: 13px;
+  margin-bottom: 10px;
+  color: #aaa;
+}
+
+.card p {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ff2e2e;
+}
+
+/* FILTROS */
+
+.filters {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+select {
+  background: #1c1c1c;
+  color: #fff;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ff2e2e;
+}
+
+/* GRÁFICOS */
+
+.charts {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+canvas {
+  background: #151515;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #ff2e2e;
+  width: 100% !important;
+  height: 350px !important;
+}
+
+/* TABELA */
+
+.table-container {
+  background: #151515;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #ff2e2e;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #222;
+}
+
+th {
+  color: #ff2e2e;
+  font-size: 13px;
+}
+
+tr:hover {
+  background: #1f1f1f;
+}
+
+#searchInput {
+  padding: 8px;
+  width: 300px;
+  background: #1c1c1c;
+  border: 1px solid #ff2e2e;
+  color: #fff;
+  border-radius: 6px;
+}
